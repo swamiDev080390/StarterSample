@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +19,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    public func add(a: Int, b: Int) -> Int {
+        return a+b
+    }
+    public func subtract(a: Int, b: Int) -> Int {
+        return a-b
+    }
 }
 

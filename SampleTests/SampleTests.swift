@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 @testable import Sample
 
 class SampleTests: XCTestCase {
@@ -21,11 +22,23 @@ class SampleTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testAdd() {
+       // XCTAssertEqualObjects(decryptedString, originalString, "The AES128 encryption decryption for byte data is not successfull");
+        let result: Int = ViewController().add(a: 3, b: 2)
+        
+        XCTAssertEqual(5, result, "Addition result is not as expected")
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
+    func testSubtract() {
+        // XCTAssertEqualObjects(decryptedString, originalString, "The AES128 encryption decryption for byte data is not successfull");
+        let result: Int = ViewController().subtract(a: 4, b: 2)
+        
+        XCTAssertEqual(3, result, "Subtraction result is not as expected")
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
